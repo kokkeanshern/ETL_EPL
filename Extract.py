@@ -15,6 +15,10 @@ def create_dataframes(list_of_names):
         temp_df = pd.read_csv("EPL Datasets/"+list_of_names[i]+".csv",sep=',',names = list(range(0,110)))
         dataframes_by_season.append(temp_df)
     return dataframes_by_season
-        
+
+# Extract an updated season's csv.
+def extract_updated(file_path):
+    df = pd.read_csv(file_path)
+    return df
 
 

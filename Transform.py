@@ -126,3 +126,11 @@ def split_dataframe(epl_data):
     tables = [games, cards, results, goals, referee, shots, fouls, corners]
 
     return tables
+
+# Keep only these columns in the update module.
+def update_keep_cols(df):
+    good_cols = ["HF","AR","HTHG","FTHG","HTR","FTAG","HS","AS","AF","HY","AC",
+                 "HTAG","FTR","HR","AY","HC","HST","AST",'Date','HomeTeam','AwayTeam',
+                 'Referee']
+    df = df[good_cols]
+    return df
